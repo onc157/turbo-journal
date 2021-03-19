@@ -1,0 +1,16 @@
+@import 'assets/stylesheets/common/reset';
+@import 'assets/stylesheets/fonts/fonts';
+@import 'assets/stylesheets/colors';
+
+body {
+  font-family: 'Proxima Nova', Georgia, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: $color-white-bg;
+
+  width: 100vw;
+  height: 100vh;
+}
