@@ -9,10 +9,10 @@ function App() {
   return (
     <>
       <Grid container>
-        <Grid item xs={2}>
+        <Grid item xs={4} sm={3} md={2}>
           <Navbar />
         </Grid>
-        <Grid item xs={10}>
+        <Grid item xs={8} sm={9} md={10}>
           <Content />
         </Grid>
         <Grid item xs={12}>
