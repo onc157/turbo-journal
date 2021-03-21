@@ -1,0 +1,44 @@
+@import '../../assets/stylesheets/colors';
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  height: 90vh;
+
+  .content--header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: $color-grey;
+
+    &__balance {}
+    &__profile {
+      display: flex;
+      align-items: center;
+
+      .header__profile--notice {
+        color: $color-red;
+      }
+      .header__profile--name {}
+    }
+    &__auth {}
+
+    & div {
+      margin-left: 30px;
+    }
+
+    &__balance:hover,
+    &__profile svg:hover,
+    &__profile div:hover,
+    &__auth:hover {
+      cursor: pointer;
+      color: $color-blue-light
+    }
+  }
+}

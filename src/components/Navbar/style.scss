@@ -1,0 +1,59 @@
+@import '../../assets/stylesheets/colors';
+
+.navbar-wrapper {
+  background: $color-blue-dark;
+
+  height: 90vh;
+  padding: 20px 0;
+
+  .navbar__logo {
+    width: 120px;
+    margin: 20px 20px 70px 20px;
+    img {
+      width: 100%;
+    }
+  }
+
+  .navbar__list {
+    &--item {
+      display: flex;
+      align-items: center;
+
+      padding: 12px 20px;
+
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      color: $color-white;
+
+      transition: .4s;
+
+      .list--item_logo {
+        width: 30px;
+        margin-right: 13px;
+      }
+
+      .list--item_name {
+      }
+
+      &:hover,
+      &-active {
+        position: relative;
+
+        cursor: pointer;
+
+        background: $color-blue-medium;
+
+        &:before {
+          position: absolute;
+          content: '';
+          top: 0;
+          left: 0;
+          width: 6px;
+          height: 100%;
+          background: $color-blue-light;
+        }
+      }
+    }
+  }
+}

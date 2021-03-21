@@ -1,0 +1,17 @@
+@import 'assets/stylesheets/common/reset';
+@import 'assets/stylesheets/fonts/fonts';
+@import 'assets/stylesheets/colors';
+
+body {
+  font-family: 'Proxima Nova', Georgia, sans-serif;
+
+  background: $color-white-bg;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
