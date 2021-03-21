@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/turbo-journal/static/css/main.9816631d.chunk.css",
-    "main.js": "/turbo-journal/static/js/main.38e40e95.chunk.js",
-    "main.js.map": "/turbo-journal/static/js/main.38e40e95.chunk.js.map",
+    "main.js": "/turbo-journal/static/js/main.3ec14ce3.chunk.js",
+    "main.js.map": "/turbo-journal/static/js/main.3ec14ce3.chunk.js.map",
     "runtime-main.js": "/turbo-journal/static/js/runtime-main.0c52774a.js",
     "runtime-main.js.map": "/turbo-journal/static/js/runtime-main.0c52774a.js.map",
     "static/js/2.8be1cea0.chunk.js": "/turbo-journal/static/js/2.8be1cea0.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.0c52774a.js",
     "static/js/2.8be1cea0.chunk.js",
     "static/css/main.9816631d.chunk.css",
-    "static/js/main.38e40e95.chunk.js"
+    "static/js/main.3ec14ce3.chunk.js"
   ]
 }
