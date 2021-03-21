@@ -13,16 +13,11 @@ function Logbook() {
   const [state, dispatch] = useReducer(logbookReducer, initialState);
   const classes = useStyles();
 
-  const handleChange = (panel: string) => (event: React.ChangeEvent<{}>, isExpanded: boolean) => {
-    dispatch(setFrameExpanded(isExpanded ? panel : false));
-  };
-
   const getFetchData = async () => {
     let fetchData = await fetch(API_URL);
     let fetchDataText = await fetchData.text();
     let fetchDataJSON = JSON.parse(convert.xml2json(fetchDataText, { compact: true, spaces: 4 }));
     dispatch(setLogbookData(fetchDataJSON.rss.channel.item));
-    console.log(state); // TODO: Delete log
   };
 
   useEffect(() => {
@@ -35,15 +30,20 @@ function Logbook() {
     return <Preloader />;
   }
 
+  const handleChange = (panel: string) => (event: React.ChangeEvent<{}>, isExpanded: boolean) => {
+    if (isExpanded) getFetchData();
+    dispatch(setFrameExpanded(isExpanded ? panel : false));
+  };
+
   const articles = state.logbookData.map((article, i) => {
     return (
       <div className="logbook__articles--item" key={article.link._text}>
-        <Accordion expanded={state.frameIsExpanded === `panel${i + 1}`} onClick={getFetchData} onChange={handleChange(`panel${i + 1}`)}>
+        <Accordion expanded={state.frameIsExpanded === `panel${i}`} onChange={handleChange(`panel${i}`)}>
           <AccordionSummary
             className={classes.accordionSummary}
             expandIcon={<ExpandMoreIcon className={classes.expandIcon} />}
-            aria-controls={`panel${i + 1}a-content`}
-            id={`panel${i + 1}a-header`}
+            aria-controls={`panel${i}a-content`}
+            id={`panel${i}a-header`}
           >
             <div className="articles--item-title">{article['turbo:topic']._text}</div>
           </AccordionSummary>
